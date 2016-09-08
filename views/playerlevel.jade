@@ -1,0 +1,200 @@
+doctype html
+html
+  head
+    title TBD Web RPG
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    link(href='css/bootstrap.min.css', rel='stylesheet', type='text/css')
+    link(href='css/styles.css', rel='stylesheet', type='text/css')
+  body
+    nav.navbar.navbar-inverse.navbar-fixed-top
+      .container-fluid
+        .navbar-header
+          button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1', aria-expanded='false')
+            span.sr-only Toggle navigation
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          a.navbar-brand(href='#') Brand
+        #bs-example-navbar-collapse-1.collapse.navbar-collapse
+          ul.nav.navbar-nav
+            li.active
+              a(href='#')
+                | Link 
+                span.sr-only (current)
+            li
+              a(href='#') Link
+            li.dropdown
+              a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
+                | Dropdown 
+                span.caret
+              ul.dropdown-menu
+                li
+                  a(href='#') Action
+                li
+                  a(href='#') Another action
+                li
+                  a(href='#') Something else here
+                li.divider(role='separator')
+                li
+                  a(href='#') Separated link
+                li.divider(role='separator')
+                li
+                  a(href='#') One more separated link
+          form.navbar-form.navbar-left(role='search')
+            .form-group
+              input.form-control(type='text', placeholder='Search')
+            button.btn.btn-default(type='submit') Submit
+          ul.nav.navbar-nav.navbar-right
+            li
+              img.img-responsive.navBarStatIcons(src='img/staticon/coin.png')
+            li
+              a#coin Coins: 0
+            li
+              img.img-responsive.navBarStatIcons(src='img/staticon/exp.png')
+            li
+              a#level Level: 1
+            li
+              img.img-responsive.navBarStatIcons(src='img/item/food/food1.png')
+            li
+              a#NinaCookie Nina Cookies: 0
+            li
+              a(href='#') Link
+            li.dropdown
+              a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
+                | Dropdown 
+                span.caret
+              ul.dropdown-menu
+                li
+                  a(href='#') Action
+                li
+                  a(href='#') Another action
+                li
+                  a(href='#') Something else here
+                li.divider(role='separator')
+                li
+                  a(href='#') Separated link
+    center
+      .container(style='padding-top:60px')
+        .row.playerBar.col-md-12
+          .col-md-2
+            img.shapeCircle(src='img/avatar/avatar1.png', alt='Avatar Icon', style='Width:128px;Height:128px;')
+          .col-md-10
+            .progress
+              img.img-responsive(src='img/staticon/heart.png')
+              #hpBar.progress-bar.progress-bar-danger(role='progressbar', aria-valuenow='0', aria-valuemin='0', aria-valuemax='100', style='width: 100%') 100/100
+            .progress
+              img.img-responsive(src='img/staticon/mana.png')
+              #manaBar.progress-bar.progress-bar-info(role='progressbar', aria-valuenow='0', aria-valuemin='0', aria-valuemax='100', style='width: 100%') 100/100
+            .progress
+              img.img-responsive(src='img/staticon/exp.png')
+              #xpBar.progress-bar.progress-bar-success(role='progressbar', aria-valuenow='0', aria-valuemin='0', aria-valuemax='100', style='width: 0%')
+        .row.pets
+          h2 Pets
+          hr
+          .col-md-12
+            .petBorder.col-md-3
+              img.peticon.img-responsive(src='img/pet/pet1.png')
+              h2 Cam Pet
+              .col-md-12
+                .col-md-2
+                  button.btn.btn-default.feedNinaCookie(type='button', onclick='feedNinaCookie()') Feed
+                #petCamLevel.petLevel.col-md-10
+                  | Level: 1
+              .col-md-12
+                .progress
+                  #hpBar.progress-bar.progress-bar-danger(role='progressbar', aria-valuenow='0', aria-valuemin='0', aria-valuemax='100', style='width: 100%') 100/100
+                .progress
+                  #xpBar.progress-bar.progress-bar-success(role='progressbar', aria-valuenow='0', aria-valuemin='0', aria-valuemax='100', style='width: 0%')
+            .col-md-1
+            .petBorder.col-md-3
+              img.peticon.img-responsive(src='img/pet/pet2.png')
+              h2 Mike Pet
+              .col-md-12
+                .col-md-2
+                  button.btn.btn-default.feedNinaCookie(type='button', onclick='feedNinaCookie()') Feed
+                #petCamLevel.petLevel.col-md-10
+                  | Level: 1
+              .col-md-12
+                .progress
+                  #hpBar.progress-bar.progress-bar-danger(role='progressbar', aria-valuenow='0', aria-valuemin='0', aria-valuemax='100', style='width: 100%') 100/100
+                .progress
+                  #xpBar.progress-bar.progress-bar-success(role='progressbar', aria-valuenow='0', aria-valuemin='0', aria-valuemax='100', style='width: 0%')
+            .col-md-1
+            .petBorder.col-md-3
+              img.peticon.img-responsive(src='img/pet/pet3.png')
+              h2 Derek Pet
+              .col-md-12
+                .col-md-2
+                  button.btn.btn-default.feedNinaCookie(type='button', onclick='feedNinaCookie()') Feed
+                #petCamLevel.petLevel.col-md-10
+                  | Level: 1
+              .col-md-12
+                .progress
+                  #hpBar.progress-bar.progress-bar-danger(role='progressbar', aria-valuenow='0', aria-valuemin='0', aria-valuemax='100', style='width: 100%') 100/100
+                .progress
+                  #xpBar.progress-bar.progress-bar-success(role='progressbar', aria-valuenow='0', aria-valuemin='0', aria-valuemax='100', style='width: 0%')
+        audio(controls='')
+          source(src='img/test.mp3', type='audio/mpeg')
+          bdo(dir='rtl') Your browser does not support the audio tag.
+        .row
+          .shop
+            h2
+              bdo(dir='rtl') Shop
+            hr
+            .col-md-12
+              .col-md-1 Icon
+              .col-md-3 Item
+              .col-md-1 Discroptin
+              .col-md-1 Type
+              .col-md-1 Level
+              .col-md-1 Cost
+              .col-md-2 Buy
+              .col-md-2 Sell
+            .col-md-12
+              .col-md-1
+                img(src='img/item/food/food1.png', alt='Derek Pet', style='Width:50px;Height:50px;')
+              .col-md-3 Pink Derek
+              .col-md-1 Farmer
+              .col-md-1 Asset
+              .col-md-1 10
+              .col-md-1 5$
+              .col-md-2
+                button.btn.btn-default(type='button', onclick='buyDerekPet()') Buy
+              .col-md-2
+                button.btn.btn-default(type='button', onclick='buyMikePet()') Sell
+            .col-md-12
+              .col-md-1
+                img(src='img/item/food/food2.png', alt='ItemFoodNinaCookie', style='Width:50px;Height:50px;')
+              .col-md-3 Nina Cookie
+              .col-md-1 Cookie
+              .col-md-1 Item:Food
+              .col-md-1 1
+              .col-md-1 2$
+              .col-md-2
+                button.btn.btn-default(type='button', onclick='buyItemFoodNinaCookie()') Buy
+              .col-md-2
+                button.btn.btn-default(type='button', onclick='sellItemFoodNinaCookie()') Sell
+            .col-md-12
+              .col-md-1
+                img(src='img/item/food/food3.png', alt='ItemFoodNinaCookie', style='Width:50px;Height:50px;')
+              .col-md-3 Metabolisum
+              .col-md-1 Meta
+              .col-md-1 Item:Food
+              .col-md-1 7
+              .col-md-1 9$
+              .col-md-2
+                button.btn.btn-default(type='button', onclick='buyItemFoodNinaCookie()') Buy
+              .col-md-2
+                button.btn.btn-default(type='button', onclick='sellItemFoodNinaCookie()') Sell
+    footer.footer
+      .container
+        .test-buttons
+          | DeBugger Bar:  
+          button.btn.btn-default(type='button', onclick='addCoin()') Add a Coin
+          button.btn.btn-default(type='button', onclick='addXp()') Add XP
+          button.btn.btn-default(type='button', onclick='subHp()') Subtract HP
+    script(src='js/test.js')
+    script(src='http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js')
+    script(src='js/bootstrap.js')
+  html
+

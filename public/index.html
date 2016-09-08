@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>TBD Web RPG</title>
+		<meta name = "viewport" content="width=device-width, initial-scale=1.0">
+		<link href = "css/bootstrap.min.css" rel = "stylesheet" type="text/css">
+		<link href = "css/styles.css" rel = "stylesheet" type="text/css">
+	</head>
+
+	<body>
+		<nav class="navbar navbar-inverse navbar-fixed-top">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+						<span class="sr-only">Toggle navigation</span>
+						
+						<span class="icon-bar"></span>
+						
+						<span class="icon-bar"></span>
+						
+						<span class="icon-bar"></span>
+					</button>
+					
+					<a class="navbar-brand" href="#">Brand</a>
+				</div>
+
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav">
+						<li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
+						
+						<li><a href="">Link</a></li>
+						
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+							<ul class="dropdown-menu">
+								<li><a href="#">Action</a></li>
+								
+								<li><a href="#">Another action</a></li>
+								
+								<li><a href="#">Something else here</a></li>
+								
+								<li role="separator" class="divider"></li>
+								
+								<li><a href="#">Separated link</a></li>
+								
+								<li role="separator" class="divider"></li>
+								
+								<li><a href="#">One more separated link</a></li>
+							</ul>
+						</li>
+					</ul>
+					<form class="navbar-form navbar-left" role="search">
+						<div class="form-group">
+							<input type="text" class="form-control" placeholder="Search">
+						</div>
+						
+						<button type="submit" class="btn btn-default">Submit</button>
+					</form>
+					<ul class="nav navbar-nav navbar-right">
+						<li><img class=" img-responsive navBarStatIcons" src="img/staticon/coin.png"></img></li>
+
+						<li><a class="" id="coin">Coins: 0</a></li>
+
+						<li><img class=" img-responsive navBarStatIcons" src="img/staticon/exp.png"></img></li>
+
+						<li><a class="" id="level">Level: 1</a></li>
+
+						<li><img class=" img-responsive navBarStatIcons" src="img/item/food/food1.png"></img></li>
+
+						<li><a class="" id="NinaCookie">Nina Cookies: 0</a></li>
+
+						<li><a href="http://24.media.tumblr.com/tumblr_mdcyicRSCh1r84nrbo2_400.gif">Link</a></li>
+						
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+							
+							<ul class="dropdown-menu">
+								<li><a href="#">Action</a></li>
+								
+								<li><a href="#">Another action</a></li>
+								
+								<li><a href="#">Something else here</a></li>
+								
+								<li role="separator" class="divider"></li>
+								
+								<li><a href="#">Separated link</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+		<center>
+			<div class="container" style="padding-top:60px">
+				<div class="row playerBar col-md-12">
+					<div class="col-md-2">
+						<img class="shapeCircle" src="img/avatar/avatar1.png" alt="Avatar Icon" style="Width:128px;Height:128px;"></img>
+					</div>
+
+					<div class="col-md-10">
+
+						<img class=" img-responsive" src="img/staticon/heart.png"></img>
+
+						<div class="progress">
+
+							<div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" id="hpBar" style="width: 100%">100/100</div>
+						</div>
+
+						<img class=" img-responsive" src="img/staticon/mana.png"></img>
+
+						<div class="progress">
+
+							<div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" id="manaBar" style="width: 100%"><img class="imgtemp" src="img/staticon/mana.png" ></img>100/100</div>
+						</div>
+
+						<img class=" img-responsive" src="img/staticon/exp.png"></img>
+
+						<div class="progress">
+
+							<div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" id="xpBar" style="width: 0%"></div>
+						</div>
+
+					</div>
+				</div>
+
+				<div class="row pets">
+					<h2>Pets</h2>
+
+					<hr></hr>
+
+					<div class="col-md-12">
+
+						<div class="petBorder col-md-3">
+							<img class=" peticon img-responsive" src="img/pet/pet1.png"></img>
+
+							<h2>Cam Pet</h2>
+							
+							<div class="col-md-12">
+								<div class="col-md-2">
+									<button type="button" class="btn btn-default feedNinaCookie" onclick="feedNinaCookie()">Feed</button>
+								</div>
+								<div class="petLevel col-md-10" id="petCamLevel">
+									Level: 1
+								</div>
+							</div>
+
+							<div class="col-md-12">
+								<div class="progress">
+									<div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" id="hpBar" style="width: 100%">100/100</div>
+								</div>
+
+								<div class="progress">
+									<div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" id="xpBar" style="width: 0%"></div>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-md-1"></div>
+
+						<div class="petBorder example col-md-3">
+							<img class=" peticon gthack imgMikePet img-responsive" src="img/pet/pet2.png"></img>
+
+							<h2>Mike Pet</h2>
+							
+							<div class="col-md-12">
+								<div class="col-md-2">
+									<button type="button" class="btn btn-default feedNinaCookie" onclick="feedMikePet()">Feed</button>
+								</div>
+								<div class="petLevel col-md-10" id="levelMikePet">
+									Level: 1
+								</div>
+							</div>
+
+							Health
+
+							<div class="col-md-12 progress progress-bar progress-bar-danger" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" id="hpMikePet" style="width: 100%">100/100</div>
+							
+
+							Happines
+
+							<div class="col-md-12 progress progress-bar progress-bar-warning progress-bar-striped active" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" id="happyBarMikePet" style="width: 100%">0/100</div>
+							
+						</div>
+
+						<div class="col-md-1"></div>
+						<div class="petBorder col-md-3">
+							<img class="peticon img-responsive" src="img/pet/pet3.png"></img>
+
+							<h2>Derek Pet</h2>
+							
+							<div class="col-md-12">
+								<div class="col-md-2">
+									<button type="button" class="btn btn-default feedNinaCookie" onclick="feedNinaCookie()">Feed</button>
+								</div>
+								<div class="petLevel col-md-10" id="petCamLevel">
+									Level: 1
+								</div>
+							</div>
+
+							<div class="col-md-12">
+								<div class="progress">
+									<div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" id="hpBar" style="width: 100%">100/100</div>
+								</div>
+
+								<div class="progress">
+									<div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" id="xpBar" style="width: 0%"></div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+
+				<audio controls>
+					<source src="img/test.mp3" type="audio/mpeg">
+					
+					<bdo dir="rtl" >Your browser does not support the audio tag.</bdo>
+				</audio>
+
+				<div class="row">
+					<div class="shop">
+						<h2><bdo dir='rtl' >Shop</bdo></h2>
+
+						<hr></hr>
+
+						<div class="col-md-12">
+							<div class="col-md-1">Icon</div>
+							<div class="col-md-3">Item</div>
+							<div class="col-md-1">Discroptin</div>
+							<div class="col-md-1">Type</div>
+							<div class="col-md-1">Level</div>
+							<div class="col-md-1">Cost</div>
+							<div class="col-md-2">Buy</div>
+							<div class="col-md-2">Sell</div>
+						</div>
+
+						<div class="col-md-12">
+							<div class="col-md-1">
+								<img class="h2 " src="img/item/food/food1.png" alt="Derek Pet" style="Width:50px;Height:50px;"></img>
+							</div>
+							<div class="col-md-3">Pink Derek</div>
+							<div class="col-md-1">Farmer</div>
+							<div class="col-md-1">Asset</div>
+							<div class="col-md-1">10</div>
+							<div class="col-md-1">5$</div>
+							<div class="col-md-2">
+								<button type="button" class="btn btn-default" onclick="buyDerekPet()">Buy</button>
+							</div>
+							<div class="col-md-2">
+								<button type="button" class="btn btn-default" onclick="buyMikePet()">Sell</button>
+							</div>
+						</div>
+
+						<div class="col-md-12">
+							<div class="col-md-1">
+								<img class="" id="lolhi" src="img/item/food/food2.png" alt="ItemFoodNinaCookie" style="Width:50px;Height:50px;"></img>
+							</div>
+							<div class="col-md-3">Nina Cookie</div>
+							<div class="col-md-1">Cookie</div>
+							<div class="col-md-1">Item:Food</div>
+							<div class="col-md-1">1</div>
+							<div class="col-md-1">2$</div>
+							<div class="col-md-2">
+								<button type="button" class="btn btn-default" onclick="buyItemFoodNinaCookie()">Buy</button>
+							</div>
+							<div class="col-md-2">
+								<button type="button" class="btn btn-default" onclick="sellItemFoodNinaCookie()">Sell</button>
+							</div>
+						</div>
+
+						<div class="col-md-12">
+							<div class="col-md-1">
+								<img class="" src= "img/item/food/food3.png" alt="ItemFoodNinaCookie" style="Width:50px;Height:50px;"></img>
+							</div>
+							<div class="col-md-3">Metabolisum</div>
+							<div class="col-md-1">Meta</div>
+							<div class="col-md-1">Item:Food</div>
+							<div class="col-md-1">7</div>
+							<div class="col-md-1">9$</div>
+							<div class="col-md-2">
+								<button type="button" class="btn btn-default" onclick="buyItemFoodNinaCookie()">Buy</button>
+							</div>
+							<div class="col-md-2">
+								<button type="button" class="btn btn-default" onclick="sellItemFoodNinaCookie()">Sell</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</center>
+
+		<footer class="footer">
+			<div class="container">
+				<div class="test-buttons">
+					DeBugger Bar:  
+					<button type="button" class="btn btn-default" onclick="addCoin()">Add a Coin</button>
+					<button type="button" class="btn btn-default" onclick="addXp()">Add XP</button>
+					<button type="button" class="btn btn-default" onclick="subHp()">Subtract HP</button>
+				</div>
+			</div>
+		</footer>
+
+		<script src = "js/test.js"></script>
+		<script src = "http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script src = "js/bootstrap.js"></script>
+	</body>
+<html>

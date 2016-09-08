@@ -1,0 +1,146 @@
+body{
+
+	margin:0px;
+	background-image: "img/item/food/food1.png";
+	background-size: cover;
+
+
+}
+
+
+.shop{
+	font-size: 21px;
+}
+.shop button{
+
+	width: 64px;
+	height: 32px;
+
+}
+
+h2123123123123123 {
+    
+    
+    -webkit-transition: width 2s; /* For Safari 3.1 to 6.0 */
+    transition: width 2s;
+}
+
+h2123123123123:hover {
+    width: 300px;
+}
+
+
+.gthack {
+    width: 100px;
+    height: 100px;
+    background-color:rgba(255,255,255,.5);
+    color: red;
+    opacity: hpMikePet;
+    position: relative;
+    -webkit-animation-name: example; /* Chrome, Safari, Opera */
+    -webkit-animation-duration: 4s; /* Chrome, Safari, Opera */
+    animation-name: spinIn10;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes example {
+    0%   {background-color:red; transform: rotate(0deg); left:10px; top:30px;}
+    25%  {background-color:yellow; transform: rotate(90deg); left:30px; top:50px;}
+    50%  {background-color:blue; transform: rotate(180deg); left:20px; top:80px;}
+    75%  {background-color:green; transform: rotate(270deg); left:23px; top:30px;}
+    100% {background-color:red; transform: rotate(360deg); left:60px; top:45px;}
+}
+
+/* Standard syntax */
+@keyframes example {
+    0%   {background-color:red; transform: rotate(0deg); left:10px; top:30px;}
+    25%  {background-color:yellow; transform: rotate(90deg); left:30px; top:50px;}
+    50%  {background-color:blue; transform: rotate(180deg); left:20px; top:80px;}
+    75%  {background-color:green; transform: rotate(270deg); left:23px; top:30px;}
+    100% {background-color:red; transform: rotate(360deg); left:60px; top:45px;}
+}
+
+@keyframes spinIn10 {
+    0%   {background-color:red; transform: rotate(0deg);}
+    10%   {background-color:red; transform: rotate(36deg);}
+    20%  {background-color:yellow; transform: rotate(72deg);}
+    30%  {background-color:blue; transform: rotate(108deg);}
+    40%  {background-color:green; transform: rotate(144deg);}
+    50% {background-color:red; transform: rotate(180deg);}
+    60%   {background-color:red; transform: rotate(216deg);}
+    70%  {background-color:yellow; transform: rotate(252deg);}
+    80%  {background-color:blue; transform: rotate(288deg);}
+    90%  {background-color:green; transform: rotate(324deg);}
+    100% {background-color:red; transform: rotate(360deg);}
+}
+
+
+
+footer{
+
+	background-color: pink;
+}
+.playerStats{
+	font-size: 24px;
+
+}
+.playerBar{
+
+	background-color: lightblue;
+}
+.pets{
+
+	background-color: lightgreen;
+	font-size: 21px;
+}
+.imgtemp{
+
+	width: 20px;
+	height: 20px;
+
+}
+
+.shapeCircle{
+
+
+	border-radius: 50%;
+
+}
+
+.peticon{
+
+	border-radius: 10%;
+	width:128px;
+	height:128px;
+
+}
+
+.petBorder{
+
+	background-color: white;
+	border-left:1px solid #EEEEEE;
+	border-right:1px solid #EEEEEE;
+	box-shadow: 10px 10px 5px gray;
+}
+.petLevel{
+
+	font-size: 32px;
+
+}
+.rotate90 {
+	
+    transform: rotate(90deg);
+    transform: rotate(330deg);
+    animation-duration: 4s;
+
+}
+.navBarStatIcons{
+
+	height: 32px;
+	width: 32px;
+
+
+}
